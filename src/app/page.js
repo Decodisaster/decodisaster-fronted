@@ -9,10 +9,12 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 
 import localFont from 'next/font/local'
+import { Audiowide } from "next/font/google"
 import { useState } from "react";
 import LoginCard from "../app/components/LoginCard";
 
 const myFont = localFont({ src: '../app/fonts/Avengers.ttf' })
+const audiowide = Audiowide({ subsets: ['latin'], weight: ['400'] })
 
 
 const style = {
@@ -32,15 +34,15 @@ export default function Home() {
 
   return (
     <div>
-      <div className="bg-gradient-to-r from-[#000000] to-transparent absolute w-[100%] h-[100%] md:h-full lg:h-full left-0 bottom-0"></div>
+      <div className="bg-gradient-to-r from-black-gradient from-5%  to-gray-gradient absolute w-[100%] h-[100%] md:h-full lg:h-full left-0 bottom-0"></div>
       <div id="main-content">
         <div className="absolute left-3 md:left-10 lg:left-10 h-screen flex flex-col justify-center">
-          <div className="space-y-7">
-            <h1 className={`text-white text-2xl md:text-3xl lg:text-5xl font-bold uppercase ${myFont.className}`}>W <span className="font-sans italic">elcome to</span></h1>
-            <h1 className={`text-white text-4xl md:text-7xl lg:text-8xl font-bold uppercase ${myFont.className}`}>D <span className="font-sans italic">ecoDisaster</span></h1>
-            <p className="text-gray-400 w-[20em] lg:w-[35em] text-md md:text-lg lg:text-xl mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus, veritatis numquam voluptas, error eius consectetur totam laborum voluptatibus voluptates ratione quam in! In, ut!</p>
+          <div className="space-y-8">
+            <h1 className={`text-white text-3xl md:text-3xl lg:text-5xl xl:text-7xl ${myFont.className} tracking-widest`}>Welcome To</h1>
+            <h1 className={`text-white text-[2.5em] md:text-7xl lg:text-8xl xl:text-[8em] ${myFont.className} tracking-widest`}>DecoDisaster</h1>
+            
             <div className="mt-10">
-              <div onClick={handleOpen} className="font-sans flex items-center justify-center w-32 h-14 bg-[#6056B6] rounded-full text-white text-2xl font-semibold hover:cursor-pointer">Login</div>
+              <div onClick={handleOpen} className={`mt-16 font-sans flex items-center justify-center w-[10rem] h-[4.5rem] lg:w-[12rem] lg:h-[5rem] bg-gradient-to-l from-[#9747FF] to-[#160023] rounded-full text-white text-[36px] lg:text-[44px] font-semibold hover:cursor-pointer ${audiowide.className}`}>Login</div>
               <Modal
                 open={modalOpen}
                 onClose={handleClose}
@@ -54,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10">
-            <h3 className="text-xl text-white mt-5 font-semibold">Presented by:</h3>
+            <h3 className={`text-xl lg:text-2xl xl:text-3xl text-white mt-5 font-semibold ${audiowide.className}`}>Presented by:</h3>
             <div className='flex flex-row gap-10 mt-5'>
               <Image src={ipu} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] p-2 rounded-lg' />
               <Image src={acm} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] p-2 rounded-full' />
