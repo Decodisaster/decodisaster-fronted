@@ -38,8 +38,8 @@ export default function Home() {
       <div id="main-content">
         <div className="absolute left-3 md:left-10 lg:left-10 h-screen flex flex-col justify-center">
           <div className="space-y-8">
-            <h1 className={`text-white text-3xl md:text-3xl lg:text-5xl xl:text-7xl ${myFont.className} tracking-widest`}>Welcome To</h1>
-            <h1 className={`text-white text-[2.5em] md:text-7xl lg:text-8xl xl:text-[8em] ${myFont.className} tracking-widest`}>DecoDisaster</h1>
+            <h1 className={`text-white text-3xl md:text-3xl lg:text-6xl ${myFont.className} tracking-wider`}>Welcome To</h1>
+            <h1 className={`text-white text-[2.5em] md:text-7xl lg:text-8xl ${myFont.className} tracking-wider`}>DecoDisaster</h1>
             
             <div className="mt-10">
               <div onClick={handleOpen} className={`mt-16 font-sans flex items-center justify-center w-[10rem] h-[4.5rem] lg:w-[12rem] lg:h-[5rem] bg-gradient-to-l from-[#9747FF] to-[#160023] rounded-full text-white text-[36px] lg:text-[44px] font-semibold hover:cursor-pointer ${audiowide.className}`}>Login</div>
@@ -56,10 +56,10 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-10">
-            <h3 className={`text-xl lg:text-2xl xl:text-3xl text-white mt-5 font-semibold ${audiowide.className}`}>Presented by:</h3>
+            <h3 className={`text-xl lg:text-2xl text-white mt-5 font-semibold ${audiowide.className}`}>Presented by:</h3>
             <div className='flex flex-row gap-10 mt-5'>
-              <Image src={ipu} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] p-2 rounded-lg' />
-              <Image src={acm} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] p-2 rounded-full' />
+              <Image src={ipu} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] lg:h-[8em] p-2 rounded-lg' />
+              <Image src={acm} width={500} height={500} alt='logo' className='bg-white w-auto h-[6em] lg:h-[8em] p-2 rounded-full' />
             </div>
           </div>
         </div>
