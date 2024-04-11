@@ -14,43 +14,50 @@ import LevelModal from "../components/LevelModal/LevelModal";
 
 const levels = [
     {
-        title: "Hell1",
+        id: 1,
+        title: "",
         src: one,
         bgColor: "bg-gradient-to-tr from-[#030511] to-[#020A2E]",
         color: "border-[#00FFFF]  hover:shadow-[#00FFFF]",
     },
     {
-        title: "Hell2",
+        id: 2,
+        title: "",
         src: two,
         bgColor: "bg-gradient-to-bl from-[#000000] to-[#0000AB]",
         color: "border-[#FFFFFF] hover:shadow-[#FFFFFF]",
     },
     {
-        title: "Hell3",
+        id: 3,
+        title: "",
         src: three,
         bgColor: "bg-gradient-to-tl from-[#400025] to-[#010101]",
         color: "border-[#BA0000]  hover:shadow-[#BA0000]",
     },
     {
-        title: "Hell4",
+        id: 4,
+        title: "",
         src: four,
         bgColor: "bg-gradient-to-tr from-[#223B7D] to-[#170307]",
         color: "border-[#F304F4] hover:shadow-[#F304F4]",
     },
     {
-        title: "Hell5",
+        id: 5,
+        title: "",
         src: five,
         bgColor: "bg-gradient-to-br from-[#400025] to-[#0D26CC]",
         color: "border-[#00FFE0]  hover:shadow-[#00FFE0]",
     },
     {
-        title: "Hell6",
+        id: 6,
+        title: "",
         src: six,
         bgColor: "bg-gradient-to-bl from-[#040021] to-[#370161]",
         color: "border-[#FAFF00]  hover:shadow-[#FAFF00]",
     },
     {
-        title: "Hell7",
+        id: 7,
+        title: "",
         src: seven,
         bgColor: "bg-gradient-to-tl from-[#961D0D] via-[#330052] to-[#000834]",
         color: "border-[#FF1E00] hover:shadow-[#FF1E00]",
@@ -71,6 +78,10 @@ export default async function Dashboard() {
         updatedModals[index] = false;
         setModalsOpen(updatedModals);
     };
+
+    const customOrder = [1, 3, 5, 6, 4, 7, 2];
+
+    levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
 
     await new Promise((resolve) => {
         setTimeout(resolve, 2000);
@@ -98,7 +109,7 @@ export default async function Dashboard() {
             <div className="flex flex-wrap h-11/12 justify-center items-center gap-5">
                 {levels.map((level, index) => (
                     <SetImage
-                        key={index}
+                        key={index.id}
                         src={level.src}
                         bgColor={level.bgColor}
                         shape={traingle}
