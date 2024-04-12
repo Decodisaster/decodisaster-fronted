@@ -9,8 +9,12 @@ import five from "../assets/card-assets/five.png";
 import six from "../assets/card-assets/six.png";
 import seven from "../assets/card-assets/seven.png";
 import traingle from "../assets/triangle.png";
-import NavCard from "../components/cards/navb";
+
+import Navbar from "../components/Navbar";
+import localFont from 'next/font/local'
 import LevelModal from "../components/LevelModal/LevelModal";
+import Image from "next/image";
+import bgImage from "../assets/bodybg.jpg";
 
 const levels = [
     {
@@ -64,6 +68,8 @@ const levels = [
     },
 ];
 
+const myFont = localFont({ src: '../fonts/Avengers.ttf' })
+
 export default async function Dashboard() {
     const [modalsOpen, setModalsOpen] = useState(Array(7).fill(false));
 
@@ -83,44 +89,36 @@ export default async function Dashboard() {
 
     levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
 
-    await new Promise((resolve) => {
+    /* await new Promise((resolve) => {
         setTimeout(resolve, 2000);
-    });
-    
+    }); */
+
     return (
-        <div className="flex items-center h-screen w-screen overflow-y-auto overflow-x-hidden flex-col">
-            <div className="flex justify-between items-center h-[10%] w-full m-3">
-                <NavCard className="border-red-500 border-solid border-b-2"></NavCard>
-                <div className="flex w-[50%] justify-center gap-2">
-                    <p className="text-white h-full w-[40%] border-yellow-300 border-[2px] rounded-md p-2 border-solid bg-blue-950">
-                        <span className="text-white uppercase">P</span>
-                        <span className="font-sans m-1 italic">oints</span> :
-                    </p>
-                    <p className="text-white h-full w-[40%] border-yellow-300 border-[2px] rounded-md p-2 border-solid bg-blue-950">
-                        <span className="text-white uppercase">T</span>
-                        <span className="font-sans italic m-1">ime</span> :
-                    </p>
+        <div className="flex flex-col h-screen body-bg ">
+            <div className="flex-1 overflow-auto">
+                <div className="px-5">
+                    <Navbar />
+                    <div className="pl-5 flex flex-col items-start space-y-5">
+                        <h2 className={`text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-wider ${myFont.className}`}>Hi, Username</h2>
+                        <h2 className={`text-3xl md:text-5xl lg:text-5xl text-white font-semibold tracking-wider ${myFont.className}`}>Welcome to DecoDisaster</h2>
+                    </div>
+                    <div className="mt-10 flex flex-wrap h-auto justify-center items-center gap-5">
+                        {levels.map((level, index) => (
+                            <SetImage
+                                key={index.id}
+                                src={level.src}
+                                bgColor={level.bgColor}
+                                shape={traingle}
+                                color={level.color}
+                                modalOpen={modalsOpen[index]}
+                                onOpen={() => handleOpenModal(index)}
+                                onClose={() => handleCloseModal(index)}
+                            >
+                                <LevelModal title={level.title} />
+                            </SetImage>
+                        ))}
+                    </div>
                 </div>
-            </div>
-            <div className="m-10 ml-20 text-left w-full">
-                <p className="text-white text-2xl md:text-3xl lg:text-5xl font-bold uppercase">H<span className="font-sans italic">I USERNAME</span></p>
-                <p className="text-white text-2xl md:text-3xl lg:text-5xl font-bold uppercase">W<span className="font-sans italic">ELCOME TO DECO DISASTER</span></p>
-            </div>
-            <div className="flex flex-wrap h-11/12 justify-center items-center gap-5">
-                {levels.map((level, index) => (
-                    <SetImage
-                        key={index.id}
-                        src={level.src}
-                        bgColor={level.bgColor}
-                        shape={traingle}
-                        color={level.color}
-                        modalOpen={modalsOpen[index]}
-                        onOpen={() => handleOpenModal(index)}
-                        onClose={() => handleCloseModal(index)}
-                    >
-                        <LevelModal title={level.title} />
-                    </SetImage>
-                ))}
             </div>
         </div>
     );

@@ -8,19 +8,35 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  /* min-height: 100vh;
   min-width: 1024px;
   width: 100%;
   height: auto;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 @media screen and (max-width: 1024px) {
   body {
     background-position: center;
   }
+}
+
+.body-bg {
+  background-image: url('../app/assets/bodybg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* min-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0; */
+
 }
 
 #loading-animation {
