@@ -9,7 +9,7 @@ const LevelModal = ({ data, onClose }) => {
 
   const toggleData = () => {
     setDataChanged((prev) => !prev);
-    onClose();
+    // onClose();
   };
 
   return (
