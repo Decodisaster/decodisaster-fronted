@@ -15,6 +15,7 @@ import localFont from 'next/font/local'
 import LevelModal from "../components/LevelModal/LevelModal";
 import Image from "next/image";
 import bgImage from "../assets/bodybg.jpg";
+import { modalData } from "../data/modalData";
 
 const levels = [
     {
@@ -84,6 +85,7 @@ export default async function Dashboard() {
         updatedModals[index] = false;
         setModalsOpen(updatedModals);
     };
+    
 
     const customOrder = [1, 3, 5, 6, 4, 7, 2];
 
@@ -94,7 +96,7 @@ export default async function Dashboard() {
     }); */
 
     return (
-        <div className="flex flex-col h-screen body-bg ">
+        <div className="flex flex-col h-screen body-bg">
             <div className="flex-1 overflow-auto">
                 <div className="px-5">
                     <Navbar />
@@ -105,7 +107,7 @@ export default async function Dashboard() {
                     <div className="mt-10 flex flex-wrap h-auto justify-center items-center gap-5">
                         {levels.map((level, index) => (
                             <SetImage
-                                key={index.id}
+                                key={level.id}
                                 src={level.src}
                                 bgColor={level.bgColor}
                                 shape={traingle}
@@ -114,7 +116,7 @@ export default async function Dashboard() {
                                 onOpen={() => handleOpenModal(index)}
                                 onClose={() => handleCloseModal(index)}
                             >
-                                <LevelModal title={level.title} />
+                                <LevelModal data={modalData[index]} />
                             </SetImage>
                         ))}
                     </div>
