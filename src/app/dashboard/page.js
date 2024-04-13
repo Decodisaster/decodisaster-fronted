@@ -17,6 +17,7 @@ import Image from "next/image";
 import bgImage from "../assets/bodybg.jpg";
 import { modalData } from "../data/modalData";
 
+
 const levels = [
     {
         id: 1,
@@ -113,8 +114,8 @@ export default async function Dashboard() {
                                 shape={traingle}
                                 color={level.color}
                                 modalOpen={modalsOpen[index]}
-                                // onOpen={() => handleOpenModal(index)}
-                                // onClose={() => handleCloseModal(index)}
+                                onOpen={() => handleOpenModal(index)}
+                                onClose={() => handleCloseModal(index)}
                             >
                                 <LevelModal data={modalData[index]} />
                             </SetImage>

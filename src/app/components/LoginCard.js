@@ -2,6 +2,7 @@ import React from 'react'
 import marvel from "../assets/marvelbg.png"
 import Link from 'next/link'
 import localFont from 'next/font/local'
+import "../globals.css"
 
 const myFont = localFont({ src: '../fonts/Avengers.ttf' })
 
@@ -16,11 +17,8 @@ function LoginCard() {
                     <div className='flex flex-col gap-5 w-[80%] h-[80%] lg:w-[90%] lg:h-[90%] items-center justify-center'>
                         <input type="email" style={{ fontFamily: 'Bruno Ace SC, sans-serif', backgroundImage: `url(${marvel.src})`, backgroundSize: 'cover', backgroundPosition: 'center', }} placeholder='Username' className='w-full h-auto rounded-xl p-5' />
                         <input type="password" style={{ fontFamily: 'Bruno Ace SC, sans-serif', backgroundImage: `url(${marvel.src})`, backgroundSize: 'cover', backgroundPosition: 'center', }} placeholder='Password' className='w-full h-auto rounded-xl p-5' />
-                        <Link href={'/dashboard'} onClick={console.log('hello')} style={{
-                            backgroundImage: `url(${marvel.src})`,
-                            backgroundSize: 'cover', backgroundPosition: 'center', fontFamily: 'Bruno Ace SC, sans-serif'
-                        }}
-                            className='hover:cursor-pointer w-[5em] text-xl md:w-[5em] md:text-2xl lg:w-[5em] lg:text-3xl h-auto p-3 rounded-xl flex items-center justify-center italic  font-bold text-[#000C4A]'
+                        <Link href={'/dashboard'} onClick={console.log('hello')}
+                            className='deco-btn'
                         >
                             Login
                         </Link>
