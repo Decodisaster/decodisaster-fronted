@@ -49,3 +49,70 @@ body {
   @apply bg-gradient-to-r from-[#5200FF] to-[#250042] w-full h-full
 }
 
+@font-face {
+  font-family: deco-btn;
+  src: url(./fonts/Avengers.ttf);
+}
+
+.deco-btn {
+  font-family: deco-btn;
+  border-radius: 9999px;
+  text-align: center;
+  min-width: 35%;
+  height: auto;
+  background: url("./assets/marvelbg.png");
+  color:#010127;
+  transition: all 0.2s ease-in-out 0s;
+  background-size: 300%;
+  background-position-x: 325%;
+  background-position-y: 297%;
+  font-weight:900;
+  font-size:x-large;
+  margin: 0px;
+  /* padding: 2px; */
+  /* isolation: isolate; */
+  padding-right: 5px;
+  /* padding-top: 5px; */
+  
+}
+
+.deco-btn:hover{  
+ background-position-x: 3%;
+ cursor: pointer;
+}
+
+/* .deco-btn::after{
+  content: '';
+  position: absolute;
+  background-color: gray;
+  margin: 0px;
+  z-index: -1;
+  inset: 0;
+  opacity: 30%;
+  border-radius: 6px;
+} */
+
+.deco-btn:focus{
+  background: url("./assets/mainbg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 200%;
+  background-position-x: center;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border: 2px solid #010127;
+  object-position: 77%;
+
+}
+
+.content-box::-webkit-scrollbar{
+  display: none;
+}
+
+.char-content{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.mcq{
+  font-family: deco-btn; 
+}
