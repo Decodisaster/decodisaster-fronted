@@ -27,8 +27,8 @@ function Navbar() {
   const seconds = timer % 60;
 
   return (
-    <div className='flex flex-col md:flex-row lg:flex-row items-center md:items-center lg:items-center justify-between px-10 py-14 gap-5'>
-      <div className='flex gap-5 items-center'>
+    <div className='flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center lg:justify-between px-4 md:px-6 lg:px-10 py-8 md:py-8 lg:py-14 gap-5'>
+      <div className='flex gap-5 items-center w-[10em] md:w-full lg:w-full'>
         <Link href="/" className='hover:cursor-pointer'>
           <Image src={ipu} width={500} height={500} alt='logo' className='bg-white w-[6em] md:w-[7em] lg:w-[8em] h-auto p-2 rounded-lg' />
         </Link>

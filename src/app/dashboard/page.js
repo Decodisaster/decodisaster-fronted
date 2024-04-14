@@ -14,7 +14,6 @@ import Navbar from "../components/Navbar";
 import localFont from 'next/font/local'
 import LevelModal from "../components/LevelModal/LevelModal";
 import Image from "next/image";
-import bgImage from "../assets/bodybg.jpg";
 import { modalData } from "../data/modalData";
 
 
@@ -97,7 +96,7 @@ export default async function Dashboard() {
     }); */
 
     return (
-        <div className="flex flex-col h-screen body-bg">
+        <div className="flex flex-col h-screen  body-bg">
             <div className="flex-1 overflow-auto">
                 <div className="px-5">
                     <Navbar />

@@ -24,11 +24,8 @@ body {
 }
 
 .body-bg {
-  background-image: url('../app/assets/bodybg.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../app/assets/bodybg.png');
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   /* min-height: 100vh;
   min-width: 1024px;
   width: 100%;
