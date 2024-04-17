@@ -1,6 +1,5 @@
 import captain from "../assets/modal-assets/captain.png"
 import char from "../assets/modal-assets/char.png"
-// import LoginCard from "../components/LoginCard"
 import Content from "../components/modalquestions/content"
 import vil0 from "../assets/modal-assets/vil0.png"
 import vil1 from "../assets/modal-assets/vil1.png"
