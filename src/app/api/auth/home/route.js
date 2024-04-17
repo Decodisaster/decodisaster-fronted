@@ -7,10 +7,9 @@ export async function GET() {
   const { value } = cookieStore.get("token");
   if (!value) {
     return NextResponse.json({
-      message: "Unauthorized",
-      status: 401,
+      redirectTo: "/",
     });
   }
-  const response = { user: "exists" };
+  const response = { redirect: "/dashboard" };
   return new Response(JSON.stringify(response), { status: 200 });
 }
