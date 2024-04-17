@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const cookieStore = cookies();
-  console.log("Cookies:");
   const { value } = cookieStore.get("token");
   if (!value) {
     return NextResponse.json({
