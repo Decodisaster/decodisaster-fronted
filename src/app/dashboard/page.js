@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import SetImage from "../components/cards/SetImage";
+import WModal from '../components/watcherModal/watchModal';
 import one from "../assets/card-assets/one.png";
 import two from "../assets/card-assets/two.png";
 import three from "../assets/card-assets/three.png";
@@ -71,57 +72,55 @@ const levels = [
 
 const myFont = localFont({ src: '../fonts/Avengers.ttf' })
 
-export default async function Dashboard() {
-    const [modalsOpen, setModalsOpen] = useState(Array(7).fill(false));
-
-    const handleOpenModal = (index) => {
-        const updatedModals = [...modalsOpen];
-        updatedModals[index] = true;
-        setModalsOpen(updatedModals);
+export default function Dashboard() {
+    const [isOpen, setIsOpen] = useState(false); // Control the visibility of the modal
+  
+    const handleOpenModal = () => {
+      setIsOpen(true);
     };
-
-    const handleCloseModal = (index) => {
-        const updatedModals = [...modalsOpen];
-        updatedModals[index] = false;
-        setModalsOpen(updatedModals);
+  
+    const handleCloseModal = () => {
+      setIsOpen(false);
     };
-    
-
+  
     const customOrder = [1, 3, 5, 6, 4, 7, 2];
-
     levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
-
-    /* await new Promise((resolve) => {
-        setTimeout(resolve, 2000);
-    }); */
+  
+    useEffect(() => {
+      // Open the modal for the first level when the page loads
+      handleOpenModal();
+    }, []);
 
     return (
-        <div className="flex flex-col h-screen  body-bg">
-            <div className="flex-1 overflow-auto">
-                <div className="px-5">
-                    <Navbar />
-                    <div className="pl-5 flex flex-col items-start space-y-5">
-                        <h2 className={`text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-wider ${myFont.className}`}>Hi, Username</h2>
-                        <h2 className={`text-3xl md:text-5xl lg:text-5xl text-white font-semibold tracking-wider ${myFont.className}`}>Welcome to DecoDisaster</h2>
-                    </div>
-                    <div className="mt-10 flex flex-wrap h-auto justify-center items-center gap-5">
-                        {levels.map((level, index) => (
-                            <SetImage
-                                key={level.id}
-                                src={level.src}
-                                bgColor={level.bgColor}
-                                shape={traingle}
-                                color={level.color}
-                                modalOpen={modalsOpen[index]}
-                                onOpen={() => handleOpenModal(index)}
-                                onClose={() => handleCloseModal(index)}
-                            >
-                                <LevelModal data={modalData[index]} />
-                            </SetImage>
-                        ))}
-                    </div>
-                </div>
+        <div className="flex flex-col h-screen body-bg">
+          <div className="flex-1 overflow-auto">
+            <div className="px-5">
+              <Navbar />
+              <div className="pl-5 flex flex-col items-start space-y-5">
+                <h2 className={`text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-wider ${myFont.className}`}>
+                  Hi, Username
+                </h2>
+                <h2 className={`text-3xl md:text-5xl lg:text-5xl text-white font-semibold tracking-wider ${myFont.className}`}>
+                  Welcome to DecoDisaster
+                </h2>
+              </div>
+              <div className="mt-10 flex flex-wrap h-auto justify-center items-center gap-5">
+                {levels.map((level, index) => (
+                  <SetImage
+                    key={level.id}
+                    src={level.src}
+                    bgColor={level.bgColor}
+                    shape={traingle}
+                    color={level.color}
+                    onOpen={handleOpenModal} // Open the modal when clicking on any card
+                  >
+                    <LevelModal data={modalData[index]} />
+                  </SetImage>
+                ))}
+              </div>
             </div>
+          </div>
+          <WModal isOpen={isOpen} onClose={handleCloseModal} /> {/* Render the single modal */}
         </div>
-    );
-}
+      );
+    }
