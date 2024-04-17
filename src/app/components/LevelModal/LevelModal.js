@@ -5,7 +5,7 @@ import localFont from 'next/font/local'
 
 const myFont = localFont({ src: '../../fonts/Avengers.ttf' })
 
-const LevelModal = ({ data, onClose }) => {
+const LevelModal = ({ data, handleCloseModal }) => {
   const [DataChanged, setDataChanged] = useState(false);
 
   const toggleData = () => {
