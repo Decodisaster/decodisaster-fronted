@@ -72,16 +72,17 @@ const levels = [
 const myFont = localFont({ src: "../fonts/Avengers.ttf" });
 
 export default function Dashboard() {
-  const [isOpen, setIsOpen] = useState(false); // Control the visibility of the modal
+
+  const [isWatcherModalOpen, setIsWatcherModalOpen] = useState(false); // Track the state of the watcherModal
 
   const handleOpenModal = () => {
-    setIsOpen(true);
+      setIsWatcherModalOpen(true); // Set the watcherModal state to open
   };
 
   const handleCloseModal = () => {
-    setIsOpen(false);
+      setIsWatcherModalOpen(false); // Set the watcherModal state to closed
   };
-
+  
   const customOrder = [1, 3, 5, 6, 4, 7, 2];
   levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
 
@@ -94,7 +95,7 @@ export default function Dashboard() {
     <div className="flex flex-col h-screen body-bg">
       <div className="flex-1 overflow-auto">
         <div className="px-5">
-          <Navbar />
+          <Navbar isWatcherModalOpen={isWatcherModalOpen} />
           <div className="pl-5 flex flex-col items-start space-y-5">
             <h2
               className={`text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-wider ${myFont.className}`}
@@ -123,7 +124,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <WModal isOpen={isOpen} onClose={handleCloseModal} />{" "}
+      <WModal isOpen={isWatcherModalOpen} onClose={handleCloseModal} />{" "}
       {/* Render the single modal */}
     </div>
   );
