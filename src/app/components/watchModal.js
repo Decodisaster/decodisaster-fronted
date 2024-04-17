@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState, useContext } from "react";
-import marvel from "../assets/marvelbg.png";
+import marvel from "./marvelbg.png";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import "./watchsty.css";
@@ -33,15 +33,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className=" box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -55,13 +55,13 @@ const watcherModal = ({ isOpen, onClose }) => {
                 <div className="my-0 content-box p-8 bg-[#D7D7D7] w-[90%] h-[90%] rounded-3xl flex flex-col gap-10 items-center justify-center overflow-x-hidden">
                   <div>
                     <h2
-                      className="text-xl md:text-2xl lg:text-2xl font-bold italic"
+                      className="text-xl md:text-2xl lg:text-2xl font-bold italic mt-10"
                       style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
                     >
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       In the aftermath of Thanos' devastating snap, the world
                       descended into chaos. With half of humanity wiped out,
@@ -98,15 +98,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className=" box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className="mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -126,7 +126,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       As one of the few remaining heroes, burdened with the
                       responsibility to save humanity, the weight of the task
@@ -164,15 +164,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -192,7 +192,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       Despite her tumultuous past, she offered her assistance in
                       the battle against her tyrannical father. With her
@@ -231,15 +231,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className=" box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -259,7 +259,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       However, with Gamora's guidance and the remnants of the
                       hero community rallying behind us, we mounted a united
@@ -298,15 +298,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -326,7 +326,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       Finally, the moment arrived. Standing face to face with
                       Thanos, I knew the fate of the universe hung in the
@@ -365,15 +365,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -393,7 +393,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       With unwavering determination, we fought for the survival
                       of humanity, for the fallen, and for the hope of a
@@ -430,15 +430,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -458,7 +458,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       With a snap of my fingers, I harnessed the power of the
                       stones to reverse the effects of the snap apocalypse,
@@ -497,15 +497,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -525,7 +525,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       From the heart of Manhattan, from the Avengers
                       Headquarters at 890 Fifth Avenue, the beacon of hope
@@ -562,15 +562,15 @@ const watcherModal = ({ isOpen, onClose }) => {
             zIndex: 999,
           }}
         >
-          <Box className="flex items-center justify-center" style={style}>
+          <Box className="box flex items-center justify-center" style={style}>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/e/e5/Uatu_the_Watcher.png"
               alt="hero"
               width={350}
               height={100}
-              className=" mr-50 pr-0 w-auto -ml-[10em] md:-ml-[10em] lg:-ml-[4em] m-36"
+              className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[30rem] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -590,7 +590,7 @@ const watcherModal = ({ isOpen, onClose }) => {
                       Life After Snap Apocalypse
                     </h2>
                   </div>
-                  <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
+                  <div className="flex flex-col gap-5 min-w-64 items-center justify-center">
                     <p className="mb-4">
                       Together, we had overcome the darkness, proving that even
                       in the face of despair, heroes will always rise to the

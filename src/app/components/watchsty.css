@@ -72,3 +72,16 @@
 .text-container button:hover {
   background-color: #0056b3;
 }
+
+@media screen and (max-width: 1024px) {
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .image{
+    margin-bottom: 30px;
+  }
+}
