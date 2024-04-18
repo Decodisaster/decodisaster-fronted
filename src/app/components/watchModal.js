@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState, useContext } from "react";
-import marvel from "./marvelbg.png";
+import marvel from "../assets/marvelbg.png";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import "./watchsty.css";
