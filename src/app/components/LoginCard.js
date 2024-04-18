@@ -7,6 +7,7 @@ import "../globals.css";
 import { loginUser } from "@/utils/api";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import AuthRedirect from "./AuthRedirect";
 
 const myFont = localFont({ src: "../fonts/Avengers.ttf" });
 
@@ -23,7 +24,7 @@ function LoginCard() {
           email,
           password,
         });
-        console.log(res);
+        console.log(res.data);
         if (res.status === 200) {
           router.push("/dashboard");
         }
@@ -58,19 +59,17 @@ function LoginCard() {
               type="email"
               style={{
                 fontFamily: "Bruno Ace SC, sans-serif",
-                backgroundImage: `url(${marvel.src})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Username"
-              className="w-full h-auto rounded-xl p-5"
+              className="w-full h-auto rounded-xl p-5 "
             />
             <input
               type="password"
               style={{
                 fontFamily: "Bruno Ace SC, sans-serif",
-                backgroundImage: `url(${marvel.src})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
