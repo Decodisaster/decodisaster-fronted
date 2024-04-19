@@ -19,6 +19,7 @@ export async function GET(request, res) {
       }
     );
     // console.log(data);
+    const finalResponse = {data}
     return new Response(JSON.stringify(data), { status: 200 });
   } catch (err) {
     console.log(err);
