@@ -6,10 +6,13 @@ export async function POST(request) {
 
   const { email, password } = body;
 
-  const res = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/login`, {
-    email,
-    password,
-  });
+  const res = await axios.post(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/login`,
+    {
+      email,
+      password,
+    },
+  );
   const finalToken = res.data.token;
   //   catch (err) {
   //   console.error(err);
@@ -19,9 +22,9 @@ export async function POST(request) {
   //     status: 500,
   //   });
   // }
-  if(!finalToken) {
+  if (!finalToken) {
     return NextResponse.json({
-      message: "Unauthorized",
+      message: "Unauthorized at frontend",
       status: 401,
     });
   }

@@ -22,7 +22,7 @@ const LevelModal = ({ data, handleCloseModal }) => {
         <h2 className="text-3xl lg:text-4xl text-white">{isDataChanged ? data.vilContent : data.heroContent}</h2>
       </div> */}
       {/* <div className="h-80 w-64 bg-gray-500 mx-20 flex items-center justify-center "> */}
-        <button className="text-4xl text-white absolute top-[2rem] left-[2rem] md:top-[6rem] lg:top-[8rem] md:left-[6rem] lg:left-[8rem] hover:cursor-pointer">X</button>
+        <button className="text-4xl text-white absolute top-[2rem] left-[2rem] md:top-[6rem] lg:top-[6rem] md:left-[6rem] lg:left-[6rem] hover:cursor-pointer">X</button>
         <div className="modal">
           <div className="modal-content">
             {/* <button className="bg-white p-2" onClick={toggleData}>

@@ -8,18 +8,20 @@ import React, { useState, useEffect } from 'react';
 
 const myFont = localFont({ src: '../fonts/Avengers.ttf' })
 
-function Navbar() {
+function Navbar({ isWatcherModalOpen }) { // Receive the isWatcherModalOpen prop
 
-  const [points, setPoints] = useState(0);
   const [timer, setTimer] = useState(0);
+  const [points, setPoints] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prevTimer) => prevTimer + 1);
-    }, 1000);
+      if (!isWatcherModalOpen) { // Start the timer only when the watcherModal is closed
+          const interval = setInterval(() => {
+              setTimer((prevTimer) => prevTimer + 1);
+          }, 1000);
 
-    return () => clearInterval(interval);
-  }, []);
+          return () => clearInterval(interval);
+      }
+  }, [isWatcherModalOpen]); // Watcher for changes in isWatcherModalOpen
 
   // Calculate hours, minutes, and seconds from total seconds
   const hours = Math.floor(timer / 3600);
