@@ -19,7 +19,7 @@ import { modalData } from "../data/modalData";
 
 const levels = [
   {
-    id: 1,
+    id: 6,
     title: "",
     src: one,
     bgColor: "bg-gradient-to-tr from-[#030511] to-[#020A2E]",
@@ -54,7 +54,7 @@ const levels = [
     color: "border-[#00FFE0]  hover:shadow-[#00FFE0]",
   },
   {
-    id: 6,
+    id: 1,
     title: "",
     src: six,
     bgColor: "bg-gradient-to-bl from-[#040021] to-[#370161]",
@@ -118,13 +118,13 @@ export default function Dashboard() {
                 color={level.color}
                 onOpen={handleOpenModal} // Open the modal when clicking on any card
               >
-                <LevelModal data={modalData[index]} />
+                <LevelModal data={modalData[index]} level={level.id}/>
               </SetImage>
             ))}
           </div>
         </div>
       </div>
-      <WModal isOpen={isWatcherModalOpen} onClose={handleCloseModal} />{" "}
+      {/* <WModal isOpen={isWatcherModalOpen} onClose={handleCloseModal} />{" "} */}
       {/* Render the single modal */}
     </div>
   );

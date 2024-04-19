@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import marvel from "../../assets/marvelbg.png";
 import Link from "next/link";
 import "../../globals.css";
@@ -9,6 +9,8 @@ import Image from "next/image";
 import cap from "../../assets/modal-assets/captain.png";
 import { modalData } from "../../data/modalData";
 import { counterContext } from "../../context/context.js";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const style = {
   position: "absolute",
@@ -20,33 +22,52 @@ const style = {
   flexdirection: "column",
 };
 
-const Content = () => {
+const Content = ({ id }) => {
+  const router = useRouter();
   const [count, setcount] = useState(0);
   const value = useContext(counterContext);
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    (async () => {
+      const { data, error } = await getQuestion(id);
+      if (data == "token expired") {
+        router.push("/?error=token expired");
+        return;
+      }
+      if (error) {
+        router.push("/dashboard");
+        return;
+      }
+      console.log(data.message);
+      setData(data.message);
+    })();
+  }, []);
 
   return (
     <>
       {count == 0 && (
         <Box
-          className="h-full flex flex-col md:flex-row lg:flex-row items-center justify-center"
+          className="h-full w-full flex flex-col md:flex-row lg:flex-row items-center justify-center"
           style={style}
         >
           <div className="flex flex-row">
             <Image
-              src={modalData[value.clicker - 1].heroImg}
+              src={
+                modalData[value.clicker - 1]?.heroImg || modalData[0].heroImg
+              }
               alt="hero"
               width={350}
               height={100}
-              className="w-[12rem] md:w-auto lg:w-auto min-h-24 mr-50 pr-0 md:-ml-[10em] lg:-ml-[4em]"
+              className="w-[12rem] max-h-xl mr-50 pr-0 md:-ml-[10em] lg:-ml-[4em]"
             />
             <div
-              className="md:top-10 lg:top-10 w-auto min-h-56 char-content text-white rounded-3xl p-7 py-15 mr-20 flex items-center justify-center gap-5 md:text-2xl lg:text-4xl font-bold italic"
+              className="lg:top-10 md:max-w-md char-content text-white rounded-3xl p-7 py-15 mr-20 flex items-center justify-center gap-5 text-md md:text-xl lg:text-2xl font-bold italic"
               style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
             >
               {modalData[count].heroContent}
             </div>
           </div>
-          <div className="px-0 max-w-[70%] h-[20rem] md:w-[30rem] md:h-[30rem] lg:w-[30rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+          <div className="px-0 h-[20rem] md:w-[50rem] md:h-[30rem] lg:w-[50rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
             <div
               style={{
                 backgroundImage: `url(${marvel.src})`,
@@ -63,43 +84,20 @@ const Content = () => {
                     className="text-xl md:text-2xl lg:text-4xl font-bold italic"
                     style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
                   >
-                    INSTRUCTIONS
+                    "Recruit, we're up against Supreme Intelligence for the
+                    Reality Stone. It's using its vast intellect to distort
+                    reality. Solve the puzzles to break through its illusions
+                    and reclaim the stone."
                   </h2>
                 </div>
-                <div className="flex flex-col gap-5 min-w-80 items-center justify-center">
-                  <h2
-                    className=" font-bold italic"
-                    style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
-                  >
-                    1. INSTRUCTIONS
-                  </h2>
-                  <h2
-                    className=" font-bold italic"
-                    style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
-                  >
-                    2. INSTRUCTIONS
-                  </h2>
-                  <h2
-                    className=" font-bold italic"
-                    style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
-                  >
-                    3. INSTRUCTIONS
-                  </h2>
-                  <h2
-                    className=" font-bold italic"
-                    style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
-                  >
-                    4. INSTRUCTIONS
-                  </h2>
-                  <button
-                    onClick={() => {
-                      setcount(count + 1);
-                    }}
-                    className="deco-btn flex items-center justify-center"
-                  >
-                    Lets Go
-                  </button>
-                </div>
+                <button
+                  onClick={() => {
+                    setcount(count + 1);
+                  }}
+                  className="deco-btn flex items-center justify-center"
+                >
+                  Lets Go
+                </button>
               </div>
             </div>
           </div>
@@ -541,5 +539,20 @@ const Content = () => {
     </>
   );
 };
+
+async function getQuestion(cardId) {
+  try {
+    const { data } = await axios.get(`/api/auth/questions?cardId=${cardId}`);
+    return {
+      data,
+      error: null,
+    };
+  } catch (err) {
+    return {
+      data: null,
+      error: err,
+    };
+  }
+}
 
 export default Content;
