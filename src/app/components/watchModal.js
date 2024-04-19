@@ -41,7 +41,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -106,7 +106,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className="mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -172,7 +172,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -239,7 +239,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -306,7 +306,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -373,7 +373,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -438,7 +438,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -505,7 +505,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,
@@ -570,7 +570,7 @@ const watcherModal = ({ isOpen, onClose }) => {
               height={100}
               className=" mr-50 pr-20 w-auto m-auto image"
             />
-            <div className=" px-0 w-[20rem] h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+            <div className=" px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[60rem] lg:h-[35rem]  rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
               <div
                 style={{
                   backgroundImage: `url(${marvel.src})`,

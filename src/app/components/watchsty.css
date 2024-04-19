@@ -83,5 +83,7 @@
 
   .image{
     margin-bottom: 30px;
+    height:250px;
+    padding-left: 30px;
   }
 }
