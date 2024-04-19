@@ -78,15 +78,12 @@ const Content = ({ id }) => {
               className="rounded-3xl flex items-center justify-center"
             >
               <div className="my-0 content-box p-10 bg-[#D7D7D7] w-[90%] h-[90%] rounded-3xl flex flex-col gap-2 items-center justify-center overflow-x-hidden">
-              <div>
+              <div className="text-center">
               <h2
                     className="font-bold italic"
                     style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
                   >
-                    <h2>#1:  INSTRUCTIONS............</h2>
-                    <h2>#2:  INSTRUCTIONS............</h2>
-                    <h2>#3:  INSTRUCTIONS............</h2>
-                    
+                    INSTRUCTIONS............ INSTRUCTIONS............ INSTRUCTIONS............ INSTRUCTIONS............                 
                   </h2>
                 </div>
                 <div className="flex flex-col min-w-80 gap-5 w-[80%] h-[80%] lg:w-[90%] lg:h-[90%] items-center justify-center">
