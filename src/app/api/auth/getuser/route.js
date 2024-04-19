@@ -21,7 +21,6 @@ export async function GET() {
       },
     }
   );
-  console.log("hello");
 
   const response = { user: data };
   return new Response(JSON.stringify(response), { status: 200 });
