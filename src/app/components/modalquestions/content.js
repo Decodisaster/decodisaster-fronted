@@ -11,6 +11,7 @@ import { modalData } from "../../data/modalData";
 import { counterContext } from "../../context/context.js";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import "../watchsty.css";
 
 const style = {
   position: "absolute",
@@ -46,21 +47,19 @@ const Content = ({ id }) => {
     <>
       (
         <Box
-          className="h-full w-full flex flex-col md:flex-row lg:flex-row items-center justify-center px-24"
+          className="h-full w-full flex flex-col md:flex-row lg:flex-col lg:gap-20 items-center justify-center px-40"
           style={style}
         >
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center items-center text-center ">
             <Image
               src={
                 modalData[id-1].heroImg 
               }
               alt="hero"
-              width={350}
-              height={100}
-              className="w-[12rem] max-h-xl mr-50 pr-0 md:-ml-[10em] lg:-ml-[4em]"
+              className=" max-h-[400px] mr-50 pr-0 w-[10rem] md:w-auto ml-10 md:-ml-[10em] lg:-ml-[4em]"
             />
             <div
-              className="lg:top-10 md:max-w-md char-content text-white rounded-3xl p-7 py-15 mr-20 flex items-center justify-center gap-5 text-md md:text-xl lg:text-2xl font-bold italic"
+              className=" min-w-[50%] min-h-56 char-color text-white rounded-3xl p-7 py-15 lg:ml-10 mr-20 flex items-center justify-center font-bold italic"
               style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
             >
               {modalData[id-1].heroContent}

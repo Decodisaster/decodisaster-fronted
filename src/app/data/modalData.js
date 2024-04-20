@@ -20,9 +20,7 @@ export const modalData = [
     heroImg: cpatainmarvel,
     vilImg: vil3,
     heroContent: "Recruit, we're up against Supreme Intelligence for the Reality Stone. It's using its vast intellect to distort reality. Solve the puzzles to break through its illusions and reclaim the stone.",
-    vilContent: "Some stuff related to the event and the character 2",
     heroMainContent: <Content id={1} />,
-    height: "300px"
   },
 
   {
@@ -30,8 +28,7 @@ export const modalData = [
     name: "Ironman",
     heroImg: ironman,
     vilImg: vil1,
-    heroContent: "Some stuff related to the event and the character",
-    vilContent: "Some stuff related to the event and the character 2",
+    heroContent: "Oh No! Seems like we are late to the scene. Iron Man is already battered. Whiplash does not have the Power Stone. He has hidden it somewhere. You must go there , now!.",
     heroMainContent: <Content id={2} />,
   },
   {
@@ -39,8 +36,7 @@ export const modalData = [
     name: "Dr. Strange",
     heroImg: drstrange,
     vilImg: vil2,
-    heroContent: "Some stuff related to the event and the character",
-    vilContent: "Some stuff related to the event and the character 2",
+    heroContent: " Recruit, Dormammu's using the Time Stone to trap us in a time loop. Solve the puzzles to break free from the loop and retrieve the stone. ",
     heroMainContent: <Content id={3} />,
   },
   {
@@ -48,8 +44,7 @@ export const modalData = [
     name: "Captainamerica",
     heroImg: captain,
     vilImg: vil0,
-    heroContent: "Some stuff related to the event and the character",
-    vilContent: "Some stuff related to the event and the character 2",
+    heroContent: "Recruit, Red Skull has the Space Stone, using it to distort space itself. Solve the puzzles to retrieve the stone.",
     heroMainContent: <Content id={4} />,
   },
   {
@@ -57,8 +52,7 @@ export const modalData = [
     name: "Spider Man",
     heroImg: spiderman,
     vilImg: vil4,
-    heroContent: "Some stuff related to the event and the character",
-    vilContent: "Some stuff related to the event and the character 2",
+    heroContent: "Recruit, Venom's using the Soul Stone to ensnare souls in his web of darkness. Solve the puzzles to break free from his grip and retrieve the stone.", 
     heroMainContent: <Content id={5} />,
   },
   {
@@ -66,8 +60,7 @@ export const modalData = [
     name: "Star Lord",
     heroImg: starlord,
     vilImg: vil5,
-    heroContent: "Some stuff related to the event and the character",
-    vilContent: "Some stuff related to the event and the character 2",
+    heroContent: "Recruit, The Collector's using the Mind Stone to play eerie noises inside our head. I can’t bear these noises anymore. What even are they? We need to find the Collector before he drives us insane with this noise.",
     heroMainContent: <Content id={6} />,
   },
 ];
