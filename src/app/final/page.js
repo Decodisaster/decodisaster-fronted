@@ -32,7 +32,7 @@ const Final = () => {
         }}
         className="rounded-3xl flex items-center justify-center"
       >
-        <div className="my-0font-bold italic text-3xl content-box p-10 bg-[#D7D7D7] w-[90%] h-[90%] rounded-3xl flex flex-col gap-10 text-[#010127] items-center justify-center overflow-x-hidden">
+        <div className="my-0font-bold italic text-3xl content-box p-10 bg-[#D7D7D7] w-[90%] h-[90%] rounded-3xl flex flex-col gap-8 text-[#010127] items-center justify-center overflow-x-hidden">
           <div className="text-center">
             <h2
               className="font-bold italic mcq"
@@ -40,7 +40,7 @@ const Final = () => {
               Thank you for playing lser. 
             </h2>
           </div>
-          <div className="text-center">
+          <div className="text-center text-4xl">
             <h2
               className="font-bold italic mcq"
 
