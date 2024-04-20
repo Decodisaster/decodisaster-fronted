@@ -85,7 +85,7 @@ const Content = ({ id }) => {
               </div>
               <div className="flex flex-col min-w-80 gap-5 w-[80%] h-[80%] lg:w-[90%] lg:h-[90%] items-center justify-center box3">
                 {data && (
-                  <Link href={`${data.question_text}`} target="_blank">
+                  <Link href={`${data.question_text}`} target="_blank" className="md:text-3xl text-xl text-red-500 hover:border-b-2 border-red-500">
                     Click here to begin your quest
                   </Link>
                 )}
