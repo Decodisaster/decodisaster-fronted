@@ -46,8 +46,8 @@ function SetImage(props) {
           }
           src={props.src}
         />
-            <div className=" text absolute inset-0 flex items-center justify-start text-white font-bold italic ml-10 text-xl">
-             <h1>L<br></br>e<br></br>v<br></br>e<br></br>l<br></br><div className="mt-1">{props.levelId}</div></h1>
+            <div className=" text absolute inset-0 flex items-center justify-start text-white font-bold italic ml-8 text-xl">
+             <h1>Level<div className="mt-3 lg:text-5xl md:text-3xl text-2xl">{props.levelId}</div></h1>
             </div>
         <Modal
           open={modalOpen}
