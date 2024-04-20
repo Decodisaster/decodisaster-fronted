@@ -48,7 +48,7 @@ const Final = () => {
               You have gained ____ points. 
             </h2>
           </div>
-          <div className="text-center">
+          <div className="text-center underline text-red-600">
             <a
               href='#'
               className="font-bold italic mcq"
