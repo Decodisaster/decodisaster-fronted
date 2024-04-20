@@ -101,8 +101,8 @@ export default function Dashboard() {
     setIsWatcherModalOpen(false); // Set the watcherModal state to closed
   };
 
-  const customOrder = [1, 3, 5, 6, 4, 7, 2];
-  levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
+  // const customOrder = [1, 3, 5, 6, 4, 7, 2];
+  // levels.sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id));
 
   useEffect(() => {
     // Open the modal for the first level when the page loads
