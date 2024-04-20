@@ -47,7 +47,7 @@ function SetImage(props) {
           src={props.src}
         />
             <div className=" text absolute inset-0 flex items-center justify-start text-white font-bold italic ml-10 text-xl">
-             <h1>L<br></br>e<br></br>v<br></br>e<br></br>l<br></br><div className="">{props.levelId}</div></h1>
+             <h1>L<br></br>e<br></br>v<br></br>e<br></br>l<br></br><div className="mt-1">{props.levelId}</div></h1>
             </div>
         <Modal
           open={modalOpen}
