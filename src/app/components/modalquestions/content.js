@@ -28,7 +28,6 @@ const Content = ({ id }) => {
   const router = useRouter();
   const value = useContext(counterContext);
   const [data, setData] = useState(null);
-  const [answer, setAnswer] = useState(null);
   useEffect(() => {
     (async () => {
       const { data, error } = await getQuestion(id);

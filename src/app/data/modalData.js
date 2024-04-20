@@ -33,12 +33,13 @@ export const modalData = [
   },
   {
     id: 3,
-    name: "Dr. Strange",
-    heroImg: drstrange,
-    vilImg: vil2,
-    heroContent: " Recruit, Dormammu's using the Time Stone to trap us in a time loop. Solve the puzzles to break free from the loop and retrieve the stone. ",
+    name: "Star Lord",
+    heroImg: starlord,
+    vilImg: vil5,
+    heroContent: "Recruit, The Collector's using the Mind Stone to play eerie noises inside our head. I can’t bear these noises anymore. What even are they? We need to find the Collector before he drives us insane with this noise.",
     heroMainContent: <Content id={3} />,
   },
+  
   {
     id: 4,
     name: "Captainamerica",
@@ -57,10 +58,10 @@ export const modalData = [
   },
   {
     id: 6,
-    name: "Star Lord",
-    heroImg: starlord,
-    vilImg: vil5,
-    heroContent: "Recruit, The Collector's using the Mind Stone to play eerie noises inside our head. I can’t bear these noises anymore. What even are they? We need to find the Collector before he drives us insane with this noise.",
+    name: "Dr. Strange",
+    heroImg: drstrange,
+    vilImg: vil2,
+    heroContent: " Recruit, Dormammu's using the Time Stone to trap us in a time loop. Solve the puzzles to break free from the loop and retrieve the stone. ",
     heroMainContent: <Content id={6} />,
   },
 ];
