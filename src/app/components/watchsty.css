@@ -86,6 +86,10 @@
     height:250px;
     padding-left: 30px;
   }
+  
+  .box2{
+    padding-left: 83px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -94,11 +98,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 500px;
   }
 
   .image{
     display: none;
   }
+
+
 }
 
 .content-box::-webkit-scrollbar{

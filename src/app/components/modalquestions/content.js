@@ -51,11 +51,11 @@ const Content = ({ id }) => {
         className="box h-full flex items-center justify-center"
         style={style}
       >
-        <div className="flex justify-center items-center m-20 md:pl-20">
+        <div className="box2 flex justify-center items-center m-20">
           <Image
             src={modalData[id - 1].heroImg}
             alt="hero"
-            className="image min-w-[300px] mr-50 pr-0 w-[10rem] md:w-auto ml-10 md:-ml-[10em] lg:-ml-[4em]"
+            className="image  min-w-[300px] mr-50 pr-0 w-[10rem] md:w-auto ml-10 md:-ml-[10em] lg:-ml-[4em]"
           />
           <div
             className=" max-h-[450px] overflow-auto md:max-w-md char-color text-white rounded-3xl p-7 py-15 ml-5 flex items-center justify-center text-md md:text-xl lg:text-2xl font-bold italic content-box"
