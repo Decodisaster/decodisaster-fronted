@@ -46,7 +46,7 @@ function SetImage(props) {
           }
           src={props.src}
         />
-            <div className=" text absolute inset-0 flex items-center justify-start text-white font-bold italic ml-8 text-xl">
+            <div className=" text absolute inset-0 flex items-center tracking-widest justify-start text-white font-bold italic ml-8 text-xl">
              <h1>Level<div className="mt-3 lg:text-5xl md:text-3xl text-2xl">{props.levelId}</div></h1>
             </div>
         <Modal
