@@ -10,10 +10,10 @@ import axios from "axios";
 
 const myFont = localFont({ src: "../fonts/Avengers.ttf" });
 
-function Navbar({ isWatcherModalOpen }) {
+function Navbar({}) {
   // Receive the isWatcherModalOpen prop
   const router = useRouter();
-  const [timer, setTimer] = useState(0);
+  // const [timer, setTimer] = useState(0);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -27,21 +27,19 @@ function Navbar({ isWatcherModalOpen }) {
     })();
   }, [router]);
 
-  useEffect(() => {
-    if (!isWatcherModalOpen) {
-      // Start the timer only when the watcherModal is closed
-      const interval = setInterval(() => {
-        setTimer((prevTimer) => prevTimer + 1);
-      }, 1000);
+  // useEffect(() => {
+  //   // Start the timer only when the watcherModal is closed
+  //   const interval = setInterval(() => {
+  //     setTimer((prevTimer) => prevTimer + 1);
+  //   }, 1000);
 
-      return () => clearInterval(interval);
-    }
-  }, [isWatcherModalOpen]); // Watcher for changes in isWatcherModalOpen
+  //   return () => clearInterval(interval);
+  // }, []); // Watcher for changes in isWatcherModalOpen
 
   // Calculate hours, minutes, and seconds from total seconds
-  const hours = Math.floor(timer / 3600);
-  const minutes = Math.floor((timer % 3600) / 60);
-  const seconds = timer % 60;
+  // const hours = Math.floor(timer / 3600);
+  // const minutes = Math.floor((timer % 3600) / 60);
+  // const seconds = timer % 60;
 
   return (
     <div className="flex flex-col md:flex-row lg:flex-row items-start md:items-center lg:items-center lg:justify-between px-4 md:px-6 lg:px-10 py-8 md:py-8 lg:py-14 gap-5">
@@ -73,7 +71,7 @@ function Navbar({ isWatcherModalOpen }) {
             Points: {user && user.points}
           </p>
         </div>
-        <div className="bg-[#000834] border-[0.4em] p-2 border-[#FAFF00] min-w-52 lg:w-72 lg:h-16 rounded-lg">
+        {/* <div className="bg-[#000834] border-[0.4em] p-2 border-[#FAFF00] min-w-52 lg:w-72 lg:h-16 rounded-lg">
           <p
             className={`text-2xl text-white tracking-wider  ${myFont.className}`}
           >
@@ -81,7 +79,7 @@ function Navbar({ isWatcherModalOpen }) {
             {minutes.toString().padStart(2, "0")}:
             {seconds.toString().padStart(2, "0")}{" "}
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
