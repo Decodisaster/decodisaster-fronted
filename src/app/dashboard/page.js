@@ -113,8 +113,10 @@ export default function Dashboard() {
                 <h2
                   className={`text-4xl md:text-6xl lg:text-7xl text-white font-semibold tracking-wider ${myFont.className}`}
                 >
-                  {user.fullname}
+                 Hi, {user.fullname}
                 </h2>
+                <br/>
+                <br/>
                 <h2
                   className={`text-3xl md:text-5xl lg:text-5xl text-white font-semibold tracking-wider ${myFont.className}`}
                 >
@@ -136,10 +138,15 @@ export default function Dashboard() {
                 ))}
               </div>
             </div>
+            
+            <br/>
+            <br/>
+            <br/>
+            <br/>
           </div>
-          {/* <WModal isOpen={isWatcherModalOpen} onClose={handleCloseModal} />{" "} */}
-          {/* Render the single modal */}
+          <WModal isOpen={isWatcherModalOpen} onClose={handleCloseModal} />
         </div>
+        
       )}
     </>
   );
