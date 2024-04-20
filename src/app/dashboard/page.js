@@ -18,6 +18,7 @@ import Image from "next/image";
 import { modalData } from "../data/modalData";
 import Loading from "./loading";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 const levels = [
   {
     id: 6,
@@ -72,6 +73,11 @@ export default function Dashboard() {
   useEffect(() => {
     (async () => {
       const { user, error } = await getUserDetails();
+      toast.promise(getUserDetails, {
+        loading: "Loading...",
+        success: "Login Successfull",
+        error: "An error occurred",
+      });
       if (error) {
         router.push("/");
         return;
