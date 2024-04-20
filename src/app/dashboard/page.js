@@ -82,8 +82,6 @@ export default function Dashboard() {
     (async () => {
       const { user, error } = await getUserDetails();
       toast.promise(getUserDetails, {
-        loading: "Loading...",
-        success: "Login Successfull",
         error: "An error occurred",
       });
       if (error) {
@@ -146,7 +144,7 @@ export default function Dashboard() {
                     } // Open the modal when clicking on any card
                   >
                     <LevelModal
-                      data={modalData[level.id-1]}
+                      data={modalData[level.id - 1]}
                       level={level.id}
                       cardsCompleted={user.cardCompleted}
                     />

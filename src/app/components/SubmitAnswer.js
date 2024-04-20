@@ -30,7 +30,9 @@ const SubmitAnswer = ({ id }) => {
             toast.error("Please Follow the Order");
             return;
           } else {
-            toast.success("Answer Submitted Successfully");
+            toast.success(
+              "Answer Submitted, click on close to unlock next card"
+            );
           }
           router.push("/dashboard");
         }}

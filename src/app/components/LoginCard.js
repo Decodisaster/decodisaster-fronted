@@ -8,6 +8,7 @@ import { loginUser } from "@/utils/api";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import AuthRedirect from "./AuthRedirect";
+import { toast } from "sonner";
 
 const myFont = localFont({ src: "../fonts/Avengers.ttf" });
 
@@ -24,12 +25,14 @@ function LoginCard() {
           email,
           password,
         });
-        console.log(res.data);
+        // console.log(res.data);
         if (res.status === 200) {
           router.push("/dashboard");
+          toast.success("Login Successful");
         }
       } catch (e) {
         console.error(e);
+        toast.error("Login Failed, Please try again");
       }
     }
   }
