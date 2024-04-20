@@ -48,23 +48,23 @@ const Content = ({ id }) => {
     <>
       (
       <Box
-        className="box h-full flex items-center justify-center"
+        className="box h-full flex items-center justify-center text-center pr-48  "
         style={style}
       >
-        <div className="box2 flex justify-center items-center m-20">
+        <div className="box2 flex justify-center items-center m-20 h-[1rem]">
           <Image
             src={modalData[id - 1].heroImg}
             alt="hero"
-            className="image  min-w-[300px] mr-50 pr-0 w-[10rem] md:w-auto ml-10 md:-ml-[10em] lg:-ml-[4em]"
+            className="image  min-w-[300px] mr-50 pl-5 w-[10rem] md:w-auto ml-10 "
           />
           <div
-            className=" max-h-[450px] overflow-auto md:max-w-md char-color text-white rounded-3xl p-7 py-15 ml-5 flex items-center justify-center text-md md:text-xl lg:text-2xl font-bold italic content-box"
+            className="box4 max-h-[450px] overflow-auto md:max-w-md char-color text-white rounded-3xl p-7 py-15 ml-5 flex items-center justify-center text-md md:text-xl lg:text-2xl font-bold italic content-box"
             style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
           >
             {data && data.instruction}
           </div>
         </div>
-        <div className="px-0 h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[50rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+        <div className="px-0 w-[20rem] h-[25rem] md:w-[45rem] md:h-[30rem] lg:w-[50rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
           <div
             style={{
               backgroundImage: `url(${marvel.src})`,
@@ -84,7 +84,7 @@ const Content = ({ id }) => {
                   1. Write all thing in a Capital Letters
                 </h2>
               </div>
-              <div className="flex flex-col min-w-80 gap-5 w-[80%] h-[80%] lg:w-[90%] lg:h-[90%] items-center justify-center">
+              <div className="flex flex-col min-w-80 gap-5 w-[80%] h-[80%] lg:w-[90%] lg:h-[90%] items-center justify-center box3">
                 {data && (
                   <Link href={`${data.question_text}`} target="_blank">
                     Click here to begin your quest

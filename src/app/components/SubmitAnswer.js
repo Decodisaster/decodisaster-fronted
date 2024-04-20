@@ -17,7 +17,7 @@ const SubmitAnswer = ({ id }) => {
           backgroundPosition: "center",
         }}
         placeholder="Enter your answer here..."
-        className=" min-h-28 w-full h-auto rounded-xl p-5"
+        className=" min-h-28 w-full h-auto rounded-xl p-5 "
       />
       <button
         onClick={async () => {
