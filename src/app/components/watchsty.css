@@ -134,3 +134,13 @@
 .content-box::-webkit-scrollbar{
   display: none;
 }
+
+
+@font-face {
+  font-family: deco-btn;
+  src: url(../fonts/Avengers.ttf);
+}
+
+.text{
+  font-family: deco-btn;
+}

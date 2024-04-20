@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { counterContext } from "../../context/context.js";
 import { AiFillLock } from "react-icons/ai";
+import localFont from "next/font/local";
 
 function SetImage(props) {
   const [clicker, setclicker] = useState(0); //for sequence wise modal opening
@@ -45,6 +46,9 @@ function SetImage(props) {
           }
           src={props.src}
         />
+            <div className=" text absolute inset-0 flex items-center justify-start text-white font-bold italic ml-10 text-xl">
+             <h1>L<br></br>e<br></br>v<br></br>e<br></br>l<br></br><div className="">{props.levelId}</div></h1>
+            </div>
         <Modal
           open={modalOpen}
           onClose={handleClose}
