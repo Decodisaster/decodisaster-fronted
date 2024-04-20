@@ -48,25 +48,23 @@ const Content = ({ id }) => {
     <>
       (
       <Box
-        className="h-full w-full flex flex-col md:flex-row lg:flex-row items-center justify-center px-24"
+        className="box h-full flex items-center justify-center"
         style={style}
       >
-        <div className="flex flex-row">
+        <div className="flex justify-center items-center m-20 md:pl-20">
           <Image
             src={modalData[id - 1].heroImg}
             alt="hero"
-            width={350}
-            height={100}
-            className="w-[12rem] max-h-xl mr-50 pr-0 md:-ml-[10em] lg:-ml-[4em]"
+            className="image min-w-[300px] mr-50 pr-0 w-[10rem] md:w-auto ml-10 md:-ml-[10em] lg:-ml-[4em]"
           />
           <div
-            className="lg:top-10 md:max-w-md char-content text-white rounded-3xl p-7 py-15 mr-20 flex items-center justify-center gap-5 text-md md:text-xl lg:text-2xl font-bold italic"
+            className=" max-h-[450px] overflow-auto md:max-w-md char-color text-white rounded-3xl p-7 py-15 ml-5 flex items-center justify-center text-md md:text-xl lg:text-2xl font-bold italic content-box"
             style={{ fontFamily: "Bruno Ace SC, sans-serif" }}
           >
             {data && data.instruction}
           </div>
         </div>
-        <div className="px-0 h-[20rem] md:w-[50rem] md:h-[30rem] lg:w-[50rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
+        <div className="px-0 h-[20rem] md:w-[45rem] md:h-[30rem] lg:w-[50rem] lg:h-[30rem] rounded-3xl bg-gradient-to-b from-[#FFF500] to-[#DABD00] flex items-center justify-center">
           <div
             style={{
               backgroundImage: `url(${marvel.src})`,
