@@ -10,6 +10,6 @@ export async function GET() {
       status: 401,
     });
   }
-  const response = { user: "exists" };
+  const response = { user: "exists"};
   return new Response(JSON.stringify(response), { status: 200 });
 }

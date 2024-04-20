@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import { toast } from "sonner";
 const SubmitAnswer = ({ id }) => {
   const router = useRouter();
   const [answer, setAnswer] = useState("");
@@ -20,10 +21,17 @@ const SubmitAnswer = ({ id }) => {
       />
       <button
         onClick={async () => {
-          console.log("before");
-          const res = await submitAnswer(id, answer);
-          console.log("after");
-          console.log(res);
+          const { data } = await submitAnswer(id, answer);
+          console.log(data);
+          if (data == "Can't Attempt Same Question Again") {
+            toast.error("Can't Attempt Same Question Again");
+            return;
+          } else if (data == "Please Follow the Order") {
+            toast.error("Please Follow the Order");
+            return;
+          } else {
+            toast.success("Answer Submitted Successfully");
+          }
           router.push("/dashboard");
         }}
         className="deco-btn  flex items-center justify-center m-2"
@@ -34,6 +42,7 @@ const SubmitAnswer = ({ id }) => {
   );
 };
 
+// data.data == "Can't Attempt Same Question Again"
 async function submitAnswer(cardId, answer) {
   try {
     const { data } = await axios.put(`/api/auth/submitanswer`, {
