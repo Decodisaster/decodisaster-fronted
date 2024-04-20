@@ -5,13 +5,27 @@ import acm from "../assets/acm-logo.png";
 import localFont from "next/font/local";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import axios from "axios";
 
 const myFont = localFont({ src: "../fonts/Avengers.ttf" });
 
 function Navbar({ isWatcherModalOpen }) {
   // Receive the isWatcherModalOpen prop
-
+  const router = useRouter();
   const [timer, setTimer] = useState(0);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const { user, error } = await getUserDetails();
+      if (error) {
+        router.push("/");
+        return;
+      }
+      setUser(user.user);
+    })();
+  }, [router]);
 
   useEffect(() => {
     if (!isWatcherModalOpen) {
@@ -52,9 +66,13 @@ function Navbar({ isWatcherModalOpen }) {
         </Link>
       </div>
       <div className="flex flex-col md:flex-row lg:flex-row gap-5">
-        {/* <div className='bg-[#000834] border-[0.4em] p-2 border-[#FAFF00] min-w-52 lg:w-72 lg:h-16 rounded-lg'>
-          <p className={`text-2xl text-white tracking-wider  ${myFont.className}`}>Points: {points}</p>
-        </div> */}
+        <div className="bg-[#000834] border-[0.4em] p-2 border-[#FAFF00] min-w-52 lg:w-72 lg:h-16 rounded-lg">
+          <p
+            className={`text-2xl text-white tracking-wider  ${myFont.className}`}
+          >
+            Points: {user && user.points}
+          </p>
+        </div>
         <div className="bg-[#000834] border-[0.4em] p-2 border-[#FAFF00] min-w-52 lg:w-72 lg:h-16 rounded-lg">
           <p
             className={`text-2xl text-white tracking-wider  ${myFont.className}`}
@@ -67,6 +85,21 @@ function Navbar({ isWatcherModalOpen }) {
       </div>
     </div>
   );
+}
+
+async function getUserDetails() {
+  try {
+    const { data } = await axios.get("/api/auth/getuser");
+    return {
+      user: data,
+      error: null,
+    };
+  } catch (e) {
+    return {
+      user: null,
+      error: e,
+    };
+  }
 }
 
 export default Navbar;
